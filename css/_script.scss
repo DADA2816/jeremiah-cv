@@ -1,0 +1,162 @@
+.script{
+    .banner{
+        height: 300px;
+        background: url(../img/banner2.jpeg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        .border-line{
+            width:200px;
+            height:2px;
+            background: white;
+        }
+        h2{
+            font-size: 33px;
+        }
+    }
+    li p{
+        animation: fadeIn;
+        animation-duration: 1.5s;
+    }
+    .main{
+        max-width: 992px;
+        margin: 0 auto;
+        padding: 90px 50px 90px;
+    }
+    .praise{
+        .person{
+            width: 28%;
+            line-height: 1.5;
+        }
+        .content{
+            line-height: 1.8;
+            width: 70%;
+            border-radius: 30px 0 30px 0;
+        }
+    }
+}
+.logline{
+    max-width: 992px;
+    line-height: 1.5;
+    padding: 70px 50px 90px;
+    .border-line{
+        width:100px;
+        height:2px;
+        background: white;
+    }
+    li{
+        width: 30%;
+        .img-1,.img-2,.img-3{
+            height: 170px;
+            background-position: center;
+            background-size: cover;
+        }
+        .img-1{
+            background-image:url(../img/偷光.jpg);
+        }
+        .img-2{
+            background-image:url(../img/shoot.jpg);
+            border-bottom: 1px solid black;
+        }
+        .img-3{
+            background-image:url(../img/回.jpg);
+        }
+    }
+    .content{
+        height: 270px;
+        a{
+            transition: all 0.3s;
+            background-color: $primary;
+            border: 1px solid $primary;
+            &:hover,&:active{
+                color: $primary;
+                background-color: white;
+            }
+        }
+    }
+}
+@include w900{
+    .logline{
+        ul{
+            flex-wrap: wrap;
+            li{
+                margin: 0 auto 75px;
+                width: 80%;
+                &:last-child{
+                    margin: 0 auto 0px;
+                }
+            }
+            .img-1,.img-2,.img-3{
+                height: 280px;
+            }
+            a{
+                padding: 20px;
+            }
+        }
+    }
+}
+@include pad{
+    .script{
+        .praise{
+            li{
+                flex-wrap: wrap;
+            }
+            .person{
+                width: 35%;
+            }
+            .content{
+                width: 63%;
+            }
+        }
+    }
+}
+@include mobile{
+    .script{
+        .banner{
+            height: 350px;
+            h2{
+                margin-top: 50px;
+            }
+        }
+        .main{
+            padding-top: 70px;
+        }
+        .praise{
+            .person{
+                width: 100%;
+                h3{
+                    margin:0 auto 20px;
+                }
+            }
+            .content{
+                width: 100%;
+            }
+        }
+    }
+}
+@include w520{
+    .script{
+        .banner h2{
+            font-size: 24px;
+        }
+        .main p{
+            font-size: 18px;
+        }
+    }
+    .logline{
+        ul{
+            h3{
+                font-size: 18px;
+            }
+            h4{
+                font-size: 16px;
+            }
+            .img-1,.img-2,.img-3{
+                height: 170px;
+            }
+            a{
+                padding: 10px;
+            }
+        }
+    }
+}
