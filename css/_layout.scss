@@ -35,6 +35,9 @@ body{
 
 // header media query
 @include mobile{
+    .container{
+        padding-left: 0px;
+    }
     .header{
         position: fixed;
         width: 100%;
@@ -64,9 +67,10 @@ body{
             }
         }
     }
-    .mobileNavbarIcon{
-        display: block;
-        float: right;
+    .mobileNavbarIcon {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
     }
     .show .mobileNavbar{
         max-height: 500px;

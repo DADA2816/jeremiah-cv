@@ -1,6 +1,6 @@
 .script{
     .banner{
-        height: 300px;
+        height: 360px;
         background: url(../img/banner2.jpeg);
         background-position: center;
         background-repeat: no-repeat;
@@ -63,7 +63,7 @@
         }
     }
     .content{
-        height: 270px;
+        height: 300px;
         a{
             transition: all 0.3s;
             background-color: $primary;
@@ -79,18 +79,24 @@
     .logline{
         ul{
             flex-wrap: wrap;
-            li{
-                margin: 0 auto 75px;
-                width: 80%;
-                &:last-child{
-                    margin: 0 auto 0px;
-                }
+        }
+        li{
+            margin: 0 auto 75px;
+            width: 80%;
+            &:last-child{
+                margin: 0 auto 0px;
             }
             .img-1,.img-2,.img-3{
-                height: 280px;
+                height: 300px;
             }
+        }
+        .content{
+            height: 280px;
             a{
-                padding: 20px;
+                padding: 15px;
+            }
+            h4{
+                font-size: 20px;
             }
         }
     }
@@ -144,19 +150,21 @@
         }
     }
     .logline{
-        ul{
-            h3{
-                font-size: 18px;
-            }
-            h4{
-                font-size: 16px;
-            }
+        li{
+            width: 100%;
             .img-1,.img-2,.img-3{
-                height: 170px;
+                height: 250px;
             }
-            a{
-                padding: 10px;
-            }
+        }
+    }
+}
+@include iphone8-plus{
+    .logline .content{
+        h3{
+            font-size: 18px;
+        }
+        h4{
+            font-size: 16px;
         }
     }
 }

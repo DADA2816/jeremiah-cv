@@ -1,5 +1,5 @@
 $(document).ready(function () {
-    $('.mobileNavbarIcon').on('click', function (e) {
+    $('.mobileNavbarIcon i').on('click', function (e) {
         e.preventDefault();
         $('body').toggleClass('show');
     });

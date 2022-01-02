@@ -1,6 +1,7 @@
 $primary: #3B4436;
 $second:#A4A195;
 $third: #E5E3DD;
+$dark-primary: #2c3328;
 // margin
 .m0-a{
     margin: 0 auto;
@@ -170,7 +171,7 @@ $third: #E5E3DD;
     padding: 70px 50px;
 }
 .p-footer{
-    padding: 35px 50px;
+    padding: 45px 50px;
 }
 
 // display
@@ -267,6 +268,9 @@ $third: #E5E3DD;
 }
 .second{
     color: $second;
+}
+.d-primary{
+    color: $dark-primary;
 }
 // background-color
 .bg-primary{
