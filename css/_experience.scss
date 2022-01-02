@@ -75,7 +75,8 @@
             background: white;
         }
         p{
-            line-height: 1.5;
+            line-height: 1.8;
+            font-size: 30px;
         }
     }
     .bg-second{
@@ -108,6 +109,11 @@
                 .img-1,.img-2,.img-3,.img-4,.content{
                     border-radius: 0px;
                 }
+            }
+        }
+        .conclusion{
+            p{
+                font-size: 24px;
             }
         }
     }

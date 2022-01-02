@@ -57,6 +57,14 @@
     }
     .bg-note{
         position: relative;
+        background-image: url(../img/note1.jpeg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        line-height: 1.8;
+        h2{
+            padding: 70px 50px 0;
+        }
     }
     .tape{
         width: 200px;
@@ -70,17 +78,12 @@
     .slogan{
         padding: 90px 50px;
         line-height: 1.8;
-    }
-    .bg-note{
-        background-image: url(../img/note1.jpeg);
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
+        font-size: 35px;
     }
     .weapon{
         max-width: 992px;
         line-height: 1.8;
-        padding: 90px 50px;
+        padding: 50px 50px 90px;
         li{
             width: 30%;
             .img-1,.img-2,.img-3{
@@ -193,17 +196,24 @@
         }
     }
 }
+@include mobile{
+    .index{
+        .slogan h2{
+            font-size: 30px;
+        }
+    }
+}
 @include w630{
     .index{
         .self-intro .content,.weapon li{
             width: 100%;
         }
-        .slogan h2{
-            font-size: 24px;
-        }
         .self-intro .mobile-img{
             width: 100%;
             padding: 90px 50px 0px;
+        }
+        .slogan h2,.bg-note h2{
+            font-size: 24px;
         }
     }
 }
