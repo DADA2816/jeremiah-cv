@@ -560,8 +560,26 @@ body a {
   }
 }
 
+.index .banner {
+  position: relative;
+}
+
 .index .banner img {
   max-height: 720px;
+  padding-top: 10px;
+  opacity: 0.9;
+}
+
+.index .banner .pcb-slogan {
+  color: #959388;
+  text-shadow: 3px 3px black;
+  border-bottom: 15px solid #3B4436;
+  font-size: 60px;
+  position: absolute;
+  right: 0;
+  top: 45%;
+  -webkit-transform: translateY(-45%);
+          transform: translateY(-45%);
 }
 
 .index .self-intro .pc-img {
@@ -617,12 +635,12 @@ body a {
   background: #3B4436;
 }
 
-.index .self-intro .content li a, .index .self-intro .content li i {
+.index .self-intro .content li a, .index .self-intro .content .line, .index .self-intro .content .fb {
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
 }
 
-.index .self-intro .content li a:hover, .index .self-intro .content li a:active, .index .self-intro .content li i:hover, .index .self-intro .content li i:active {
+.index .self-intro .content li a:hover, .index .self-intro .content li a:active, .index .self-intro .content .line:hover, .index .self-intro .content .line:active, .index .self-intro .content .fb:hover, .index .self-intro .content .fb:active {
   color: #A4A195;
 }
 
@@ -690,6 +708,9 @@ body a {
 }
 
 @media (max-width: 1200px) {
+  .index .banner .pcb-slogan {
+    font-size: 45px;
+  }
   .index .self-intro .pc-img .img-1 {
     width: 250px;
     height: 350px;
@@ -729,6 +750,9 @@ body a {
 }
 
 @media (max-width: 900px) {
+  .index .banner .pcb-slogan {
+    font-size: 36px;
+  }
   .index .self-intro {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
@@ -773,8 +797,26 @@ body a {
 }
 
 @media (max-width: 767px) {
+  .index .banner img {
+    opacity: 1;
+  }
+  .index .banner .pcb-slogan {
+    display: none;
+  }
+  .index .banner .mob-slogan {
+    display: block;
+    padding-top: 120px;
+    color: #3B4436;
+    text-shadow: 1px 1px #A4A195;
+  }
+  .index .slogan {
+    padding: 70px 50px;
+  }
   .index .slogan h2 {
     font-size: 30px;
+  }
+  .index .banner img {
+    margin-top: 10px;
   }
 }
 
@@ -786,8 +828,14 @@ body a {
     width: 100%;
     padding: 90px 50px 0px;
   }
+  .index .mob-slogan {
+    font-size: 26px;
+  }
   .index .slogan h2, .index .bg-note h2 {
     font-size: 24px;
+  }
+  .index .slogan {
+    padding: 60px 50px;
   }
 }
 
@@ -798,8 +846,21 @@ body a {
 }
 
 @media (max-width: 414px) {
+  .index .banner .mob-slogan {
+    padding-top: 110px;
+    font-size: 24px;
+  }
+  .index .banner img {
+    margin-top: 20px;
+  }
   .index .slogan {
-    padding: 70px 50px;
+    padding: 50px 50px;
+  }
+  .index .bg-note h2 {
+    padding: 50px 50px 0;
+  }
+  .index .weapon {
+    padding: 30px 50px 50px;
   }
   .index .self-intro {
     font-size: 18px;

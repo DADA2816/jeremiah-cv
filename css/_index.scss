@@ -1,6 +1,21 @@
 .index{
-    .banner img{
-        max-height: 720px;
+    .banner{
+        position: relative;
+        img{
+            max-height: 720px;
+            padding-top: 10px;
+            opacity: 0.9;
+        }
+        .pcb-slogan{
+            color: #959388;
+            text-shadow: 3px 3px black;
+            border-bottom: 15px solid $primary;
+            font-size: 60px;
+            position: absolute;
+            right: 0;
+            top: 45%;
+            transform: translateY(-45%);
+        }
     }
     .self-intro{
         .pc-img{
@@ -47,7 +62,7 @@
                 height:2px;
                 background: $primary;
             }
-            li a,li i{
+            li a,.line,.fb{
                 transition: all 0.3s;
                 &:hover,&:active{
                     color: $second;
@@ -108,26 +123,32 @@
     }
 }
 @include w1200{
-    .index .self-intro .pc-img{
-        .img-1{
-            width: 250px;
-            height: 350px;
-            left: 250px;
+    .index {
+        .banner .pcb-slogan{
+            font-size: 45px;
         }
-        .img-2{
-            width: 230px;
-            height: 330px;
-            top: 350px;
-            left: 100px;
+        .self-intro .pc-img{
+            .img-1{
+                width: 250px;
+                height: 350px;
+                left: 250px;
+            }
+            .img-2{
+                width: 230px;
+                height: 330px;
+                top: 350px;
+                left: 100px;
+            }
+            .img-3{
+                width: 350px;
+                height: 250px;
+            }
         }
-        .img-3{
-            width: 350px;
-            height: 250px;
-        }
+
     }
 }
 @include pad{
-    .index{
+    .index{    
         .self-intro .pc-img{
             .img-1{
                 width: 230px;
@@ -154,6 +175,9 @@
 }
 @include w900{
     .index {
+        .banner .pcb-slogan{
+            font-size: 36px;
+        }
         .self-intro {
             flex-wrap: wrap;
             .pc-img{
@@ -198,8 +222,28 @@
 }
 @include mobile{
     .index{
-        .slogan h2{
-            font-size: 30px;
+        .banner {
+            img{
+                opacity: 1;
+            }
+            .pcb-slogan{
+                display: none;
+            }
+            .mob-slogan{
+                display: block;
+                padding-top: 120px;
+                color: $primary;
+                text-shadow: 1px 1px $second;
+            }
+        }
+        .slogan{
+            padding: 70px 50px;
+            h2{
+                font-size: 30px;
+            }
+        }
+        .banner img{
+            margin-top: 10px;
         }
     }
 }
@@ -212,8 +256,14 @@
             width: 100%;
             padding: 90px 50px 0px;
         }
+        .mob-slogan{
+            font-size: 26px;
+        }
         .slogan h2,.bg-note h2{
             font-size: 24px;
+        }
+        .slogan{
+            padding: 60px 50px;
         }
     }
 }
@@ -226,8 +276,23 @@
 }
 @include iphone8-plus{
     .index{
+        .banner{
+            .mob-slogan{
+                padding-top: 110px;
+                font-size: 24px;
+            }
+            img{
+                margin-top: 20px;
+            }
+        }
         .slogan{
-            padding: 70px 50px;
+            padding: 50px 50px;
+        }
+        .bg-note h2{
+            padding: 50px 50px 0;
+        }
+        .weapon{
+            padding: 30px 50px 50px;
         }
         .self-intro{
             font-size: 18px;
