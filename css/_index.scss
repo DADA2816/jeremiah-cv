@@ -1,20 +1,14 @@
 .index{
     .banner{
-        position: relative;
+        padding-top: 50px;
         img{
             max-height: 720px;
             padding-top: 10px;
             opacity: 0.9;
         }
         .pcb-slogan{
-            color: #959388;
-            text-shadow: 3px 3px black;
-            border-bottom: 15px solid $primary;
-            font-size: 60px;
-            position: absolute;
-            right: 0;
-            top: 45%;
-            transform: translateY(-45%);
+            color: $primary;
+            font-size: 45px;
         }
     }
     .self-intro{
@@ -70,12 +64,16 @@
             }
         }
     }
+    .test{
+        max-width: 100%;
+        height: 600px;
+    }
     .bg-note{
         position: relative;
         background-image: url(../img/note1.jpeg);
         background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
+        background-repeat: repeat-y;
+        background-size: contain;
         line-height: 1.8;
         h2{
             padding: 70px 50px 0;
@@ -223,18 +221,13 @@
 @include mobile{
     .index{
         .banner {
+            padding-top: 120px;
             img{
                 opacity: 1;
             }
-            .pcb-slogan{
-                display: none;
-            }
-            .mob-slogan{
-                display: block;
-                padding-top: 120px;
-                color: $primary;
-                text-shadow: 1px 1px $second;
-            }
+            // .pcb-slogan{
+            //     display: none;
+            // }
         }
         .slogan{
             padding: 70px 50px;
@@ -249,15 +242,15 @@
 }
 @include w630{
     .index{
+        .banner .pcb-slogan{
+            font-size: 30px;
+        }
         .self-intro .content,.weapon li{
             width: 100%;
         }
         .self-intro .mobile-img{
             width: 100%;
             padding: 90px 50px 0px;
-        }
-        .mob-slogan{
-            font-size: 26px;
         }
         .slogan h2,.bg-note h2{
             font-size: 24px;
@@ -268,19 +261,21 @@
     }
 }
 @include w520{
-    .index .weapon li{
-        .img-1,.img-2,.img-3{
-            height: 250px;
+    .index {
+        .banner .pcb-slogan{
+            font-size: 24px;
+        }
+        .weapon li{
+            .img-1,.img-2,.img-3{
+                height: 250px;
+            }
         }
     }
 }
 @include iphone8-plus{
     .index{
         .banner{
-            .mob-slogan{
-                padding-top: 110px;
-                font-size: 24px;
-            }
+            padding-top: 100px;
             img{
                 margin-top: 20px;
             }

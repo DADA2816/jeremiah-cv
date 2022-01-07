@@ -561,7 +561,7 @@ body a {
 }
 
 .index .banner {
-  position: relative;
+  padding-top: 50px;
 }
 
 .index .banner img {
@@ -571,15 +571,8 @@ body a {
 }
 
 .index .banner .pcb-slogan {
-  color: #959388;
-  text-shadow: 3px 3px black;
-  border-bottom: 15px solid #3B4436;
-  font-size: 60px;
-  position: absolute;
-  right: 0;
-  top: 45%;
-  -webkit-transform: translateY(-45%);
-          transform: translateY(-45%);
+  color: #3B4436;
+  font-size: 45px;
 }
 
 .index .self-intro .pc-img {
@@ -644,12 +637,17 @@ body a {
   color: #A4A195;
 }
 
+.index .test {
+  max-width: 100%;
+  height: 600px;
+}
+
 .index .bg-note {
   position: relative;
   background-image: url(../img/note1.jpeg);
   background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+  background-repeat: repeat-y;
+  background-size: contain;
   line-height: 1.8;
 }
 
@@ -797,17 +795,11 @@ body a {
 }
 
 @media (max-width: 767px) {
+  .index .banner {
+    padding-top: 120px;
+  }
   .index .banner img {
     opacity: 1;
-  }
-  .index .banner .pcb-slogan {
-    display: none;
-  }
-  .index .banner .mob-slogan {
-    display: block;
-    padding-top: 120px;
-    color: #3B4436;
-    text-shadow: 1px 1px #A4A195;
   }
   .index .slogan {
     padding: 70px 50px;
@@ -821,15 +813,15 @@ body a {
 }
 
 @media (max-width: 630px) {
+  .index .banner .pcb-slogan {
+    font-size: 30px;
+  }
   .index .self-intro .content, .index .weapon li {
     width: 100%;
   }
   .index .self-intro .mobile-img {
     width: 100%;
     padding: 90px 50px 0px;
-  }
-  .index .mob-slogan {
-    font-size: 26px;
   }
   .index .slogan h2, .index .bg-note h2 {
     font-size: 24px;
@@ -840,15 +832,17 @@ body a {
 }
 
 @media (max-width: 520px) {
+  .index .banner .pcb-slogan {
+    font-size: 24px;
+  }
   .index .weapon li .img-1, .index .weapon li .img-2, .index .weapon li .img-3 {
     height: 250px;
   }
 }
 
 @media (max-width: 414px) {
-  .index .banner .mob-slogan {
-    padding-top: 110px;
-    font-size: 24px;
+  .index .banner {
+    padding-top: 100px;
   }
   .index .banner img {
     margin-top: 20px;
