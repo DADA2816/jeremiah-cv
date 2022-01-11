@@ -565,9 +565,7 @@ body a {
 }
 
 .index .banner img {
-  max-height: 720px;
   padding-top: 10px;
-  opacity: 0.9;
 }
 
 .index .banner .pcb-slogan {
@@ -642,6 +640,51 @@ body a {
   height: 600px;
 }
 
+.index .slogan {
+  padding: 90px 50px;
+  line-height: 1.8;
+}
+
+.index .b-slogan {
+  font-size: 40px;
+}
+
+.index .block1, .index .block2 {
+  font-size: 30px;
+  background: #E5E3DD;
+  max-width: 992px;
+  margin: 50px auto 0px;
+  padding: 10px;
+  line-height: 1.6;
+}
+
+.index .dialog-bottom {
+  margin: 50px auto 40px;
+  max-width: 992px;
+  height: 88px;
+  background: #888888;
+  position: relative;
+}
+
+.index .dialog-bottom:last-child {
+  margin: 0 auto;
+}
+
+.index .dialog-bottom::after {
+  border-color: #888888 #888888 transparent transparent;
+  border-style: solid solid solid solid;
+  /* 設定邊框大小可拼湊出任意形狀的三角形 */
+  border-width: 15px 10px 15px 10px;
+  bottom: -29px;
+  /* 必須指定，才能顯示內容 */
+  content: "";
+  height: 0px;
+  left: 30px;
+  /* 必須指定，否則會變梯形 */
+  position: absolute;
+  width: 0px;
+}
+
 .index .bg-note {
   position: relative;
   background-image: url(../img/note1.jpeg);
@@ -649,10 +692,11 @@ body a {
   background-repeat: repeat-y;
   background-size: contain;
   line-height: 1.8;
+  padding-top: 70px;
 }
 
 .index .bg-note h2 {
-  padding: 70px 50px 0;
+  font-size: 40px;
 }
 
 .index .tape {
@@ -664,12 +708,6 @@ body a {
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-}
-
-.index .slogan {
-  padding: 90px 50px;
-  line-height: 1.8;
-  font-size: 35px;
 }
 
 .index .weapon {
@@ -724,6 +762,15 @@ body a {
     width: 350px;
     height: 250px;
   }
+  .index .b-slogan {
+    font-size: 35px;
+  }
+  .index .dialog-bottom {
+    margin: 50px auto;
+  }
+  .index .block1, .index .block2 {
+    font-size: 28px;
+  }
 }
 
 @media (max-width: 991px) {
@@ -747,9 +794,25 @@ body a {
   }
 }
 
+@media (max-width: 980px) {
+  .index .dialog-bottom {
+    display: none;
+  }
+  .index .block1, .index .block2 {
+    padding: 10px 15px;
+  }
+  .index .mob .block1, .index .mob .block2 {
+    display: block;
+    border-bottom: 20px solid #888888;
+  }
+  .index .block2 {
+    margin-bottom: 20px;
+  }
+}
+
 @media (max-width: 900px) {
-  .index .banner .pcb-slogan {
-    font-size: 36px;
+  .index .banner .pcb-slogan, .index .bg-note h2 {
+    font-size: 35px;
   }
   .index .self-intro {
     -ms-flex-wrap: wrap;
@@ -804,9 +867,6 @@ body a {
   .index .slogan {
     padding: 70px 50px;
   }
-  .index .slogan h2 {
-    font-size: 30px;
-  }
   .index .banner img {
     margin-top: 10px;
   }
@@ -823,11 +883,18 @@ body a {
     width: 100%;
     padding: 90px 50px 0px;
   }
-  .index .slogan h2, .index .bg-note h2 {
+  .index .b-slogan, .index .bg-note h2 {
     font-size: 24px;
   }
   .index .slogan {
     padding: 60px 50px;
+  }
+  .index .block1, .index .block2 {
+    margin: 30px auto;
+    font-size: 20px;
+  }
+  .index .mob .block1, .index .mob .block2 {
+    border-bottom: 15px solid #888888;
   }
 }
 
@@ -849,9 +916,6 @@ body a {
   }
   .index .slogan {
     padding: 50px 50px;
-  }
-  .index .bg-note h2 {
-    padding: 50px 50px 0;
   }
   .index .weapon {
     padding: 30px 50px 50px;

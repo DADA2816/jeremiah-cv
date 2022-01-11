@@ -8,6 +8,11 @@
         @content;
     }
 }
+@mixin w980 {
+    @media (max-width:980px) {
+        @content;
+    }
+}
 @mixin hobby-adjust {
     @media (max-width:940px) {
         @content;
